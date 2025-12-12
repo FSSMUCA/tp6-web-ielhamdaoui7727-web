@@ -1,54 +1,42 @@
 <?php
-// ===== DÉCLARATION DES VARIABLES =====
+$etablissement = "Faculté des Sciences Semlalia de Marrakech";
+$module = "Programmation Web";
+$professeur = "Dr. Abdelmoula Abouhilal";
+$semestre = "Semestre 3";
 
-// Variables chaînes de caractères
-$etablissement = "Université Mohammed V";
-$module = "Développement Web";
-$professeur = "Dr. Ahmed Bennani";
-$semestre = "Semestre 5";
-
-// Variables entières
 $annee = 2024;
 $tp_numero = 6;
 $nombre_etudiants = 45;
-$duree_tp = 3; // en heures
+$duree_tp = 3;
 
-// Variables décimales
 $note1 = 15.5;
 $note2 = 17.0;
 $note3 = 16.25;
 $note4 = 14.75;
 
-// Variables numériques pour les exemples
 $nombre1 = 25;
 $nombre2 = 15;
 $prix_unitaire = 49.99;
 $quantite = 3;
 
-// ===== CALCULS SIMPLES =====
 
-// Opérations arithmétiques de base
 $somme = $nombre1 + $nombre2;
 $difference = $nombre1 - $nombre2;
 $produit = $nombre1 * $nombre2;
 $division = $nombre1 / $nombre2;
 $modulo = $nombre1 % $nombre2;
 
-// Calculs avancés
 $total_commande = $prix_unitaire * $quantite;
-$tva = $total_commande * 0.20; // TVA 20%
+$tva = $total_commande * 0.20; 
 $total_ttc = $total_commande + $tva;
 
-// Calculs de moyennes
 $moyenne_notes = ($note1 + $note2 + $note3 + $note4) / 4;
 $moyenne_nombres = ($nombre1 + $nombre2) / 2;
 
-// Concaténation de chaînes
 $annee_complete = $annee . "-" . ($annee + 1);
 $titre_complet = "TP" . $tp_numero . " : " . $module;
 $message_bienvenue = "Bienvenue à " . $etablissement;
 
-// Calculs avec des dates
 $annee_prochaine = $annee + 1;
 $age_etudiant = 21;
 $annee_naissance = $annee - $age_etudiant;
@@ -215,24 +203,20 @@ $annee_naissance = $annee - $age_etudiant;
 </head>
 <body>
     <div class="container">
-        <h1>🐘 Introduction au PHP</h1>
+        <h1>Introduction au PHP</h1>
         <p class="subtitle">TP<?php echo $tp_numero; ?> - Variables et Calculs Simples</p>
 
-        <!-- Section 1 : Informations Générales -->
-        <h2>📚 Informations Générales</h2>
+        <h2>Informations Générales</h2>
         <div class="info-box">
             <p><strong>Nom de l'établissement:</strong> <?php echo $etablissement; ?></p>
             <p><strong>Module:</strong> <?php echo $module; ?></p>
             <p><strong>Professeur:</strong> <?php echo $professeur; ?></p>
             <p><strong>Semestre:</strong> <?php echo $semestre; ?></p>
             <p><strong>Année universitaire:</strong> <?php echo $annee_complete; ?></p>
-            <p><strong>Numéro du TP:</strong> TP<?php echo $tp_numero; ?></p>
-            <p><strong>Nombre d'étudiants:</strong> <?php echo $nombre_etudiants; ?> étudiants</p>
-            <p><strong>Durée du TP:</strong> <?php echo $duree_tp; ?> heures</p>
+            <p><strong>Numéro du TP:</strong> <?php echo $tp_numero; ?></p>
         </div>
 
-        <!-- Section 2 : Variables Numériques -->
-        <h2>🔢 Variables Numériques - Exemples</h2>
+        <h2>Variables Numériques - Exemples</h2>
         <div class="info-box">
             <p><strong>Variable $nombre1:</strong> <span class="highlight"><?php echo $nombre1; ?></span></p>
             <p><strong>Variable $nombre2:</strong> <span class="highlight"><?php echo $nombre2; ?></span></p>
@@ -240,8 +224,7 @@ $annee_naissance = $annee - $age_etudiant;
             <p><strong>Variable $quantite:</strong> <span class="highlight"><?php echo $quantite; ?></span></p>
         </div>
 
-        <!-- Section 3 : Opérations Arithmétiques -->
-        <h2>➕ Résultats des Opérations</h2>
+        <h2>Résultats des Opérations</h2>
         
         <div class="result">
             <strong>Addition:</strong> 
@@ -273,8 +256,7 @@ $annee_naissance = $annee - $age_etudiant;
             <span class="highlight"><?php echo $modulo; ?></span>
         </div>
 
-        <!-- Section 4 : Calculs Avancés -->
-        <h2>💰 Exemple de Calcul Commercial</h2>
+        <h2>Exemple de Calcul Commercial</h2>
         <div class="info-box">
             <table>
                 <tr>
@@ -304,8 +286,7 @@ $annee_naissance = $annee - $age_etudiant;
             </table>
         </div>
 
-        <!-- Section 5 : Notes et Moyennes -->
-        <h2>📊 Calculs de Notes</h2>
+        <h2>Calculs de Notes</h2>
         <div class="info-box">
             <p><strong>Note 1:</strong> <?php echo $note1; ?>/20</p>
             <p><strong>Note 2:</strong> <?php echo $note2; ?>/20</p>
@@ -319,8 +300,7 @@ $annee_naissance = $annee - $age_etudiant;
             <span class="highlight"><?php echo number_format($moyenne_notes, 2); ?>/20</span>
         </div>
 
-        <!-- Section 6 : Concaténation -->
-        <h2>🔗 Concaténation de Chaînes</h2>
+        <h2>Concaténation de Chaînes</h2>
         <div class="result">
             <strong>Message complet:</strong> <?php echo $message_bienvenue; ?>
         </div>
@@ -333,11 +313,10 @@ $annee_naissance = $annee - $age_etudiant;
             <strong>Période:</strong> Année universitaire <?php echo $annee_complete; ?>
         </div>
 
-        <!-- Section 7 : Code PHP Exemple -->
-        <h2>💻 Exemples de Code PHP</h2>
+        <h2>Exemples de Code PHP</h2>
         <div class="php-code">
-<span class="php-var">$etablissement</span> = <span class="php-string">"Université Mohammed V"</span>;
-<span class="php-var">$annee</span> = <span class="php-number">2024</span>;
+<span class="php-var">$etablissement</span> = <span class="php-string">"Faculté des Sciences Semlalia de Marrakech"</span>;
+<span class="php-var">$annee</span> = <span class="php-number">2025</span>;
 <span class="php-var">$nombre1</span> = <span class="php-number">25</span>;
 <span class="php-var">$nombre2</span> = <span class="php-number">15</span>;
 <span class="php-var">$somme</span> = <span class="php-var">$nombre1</span> + <span class="php-var">$nombre2</span>; <span style="color: #75715e;">// Résultat: <?php echo $somme; ?></span>

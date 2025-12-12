@@ -1,31 +1,26 @@
-/* ===== RÉINITIALISATION GLOBALE ===== */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-/* ===== VARIABLES COULEURS (Nouveau Thème) ===== */
 :root {
-    --color-primary: #1abc9c; /* Vert Émeraude */
-    --color-secondary: #2c3e50; /* Bleu Nuit */
-    --color-background: #ecf0f1; /* Gris Clair/Blanc Cassé */
-    --color-text-dark: #34495e; /* Gris foncé */
-    --color-error: #e74c3c; /* Rouge */
-    --color-success: #2ecc71; /* Vert clair pour résultat */
+    --color-primary: #1abc9c; 
+    --color-secondary: #2c3e50; 
+    --color-background: #ecf0f1; 
+    --color-text-dark: #34495e; 
+    --color-error: #e74c3c;
+    --color-success: #2ecc71; 
 }
 
 
-/* ===== STYLES DU BODY ===== */
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    /* Dégradé de fond sombre et profond */
     background: linear-gradient(135deg, var(--color-secondary) 0%, #34495e 100%); 
     min-height: 100vh;
     color: var(--color-text-dark);
 }
 
-/* ===== EN-TÊTE (Fond Émeraude pour contraste) ===== */
 header {
     background: var(--color-primary);
     padding: 2rem;
@@ -35,37 +30,33 @@ header {
 
 header h1 {
     font-size: 2.8rem;
-    color: white; /* Titre blanc sur fond émeraude */
+    color: white; 
     margin-bottom: 0.5rem;
     text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
 }
 
 
-/* ===== CONTENU PRINCIPAL (Utilisation de Grid) ===== */
 main {
     max-width: 1200px;
     margin: 2rem auto;
     padding: 0 1rem;
     display: grid;
-    /* S'ajuste dynamiquement pour avoir au moins 400px par colonne */
     grid-template-columns: repeat(auto-fit, minmax(400px, 1fr)); 
     gap: 2rem;
 }
 
-/* ===== SECTIONS (Cartes flottantes) ===== */
 .calculator-section,
 .history-section {
     background: var(--color-background);
     padding: 2rem;
     border-radius: 12px;
-    /* Ombre subtile et plus présente au survol */
     box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1); 
     transition: transform 0.4s cubic-bezier(0.25, 0.8, 0.25, 1), box-shadow 0.4s ease;
 }
 
 .calculator-section:hover,
 .history-section:hover {
-    transform: translateY(-8px); /* Flotte un peu plus haut */
+    transform: translateY(-8px); 
     box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
 }
 
@@ -74,12 +65,10 @@ h2 {
     font-size: 2rem;
     margin-bottom: 1.5rem;
     padding-bottom: 0.5rem;
-    /* Ligne de séparation plus contrastée */
     border-bottom: 4px solid var(--color-primary); 
     font-weight: 700;
 }
 
-/* ===== FORMULAIRE CALCULATRICE (Flexbox) ===== */
 .calc-form {
     display: flex;
     flex-direction: column;
@@ -98,7 +87,7 @@ label {
 input,
 select {
     padding: 1rem;
-    border: 1px solid #bdc3c7; /* Bordure légère */
+    border: 1px solid #bdc3c7; 
     border-radius: 8px;
     font-size: 1rem;
     transition: all 0.3s ease;
@@ -109,7 +98,6 @@ input:focus,
 select:focus {
     outline: none;
     border-color: var(--color-primary);
-    /* Anneau lumineux autour du focus */
     box-shadow: 0 0 0 4px rgba(26, 188, 156, 0.3); 
 }
 
@@ -118,10 +106,8 @@ select:hover {
     border-color: var(--color-primary);
 }
 
-/* ===== BOUTONS (Effet 3D léger) ===== */
 button {
     padding: 1.2rem;
-    /* Dégradé du bouton plus audacieux */
     background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-success) 100%); 
     color: white;
     border: none;
@@ -135,7 +121,7 @@ button {
 }
 
 button:hover {
-    transform: translateY(-3px) scale(1.02); /* Élévation subtile */
+    transform: translateY(-3px) scale(1.02); 
     box-shadow: 0 10px 20px rgba(26, 188, 156, 0.5);
 }
 
@@ -148,7 +134,6 @@ button:active {
     margin-top: 0.5rem;
 }
 
-/* ===== MESSAGES D'ERREUR (Très visible) ===== */
 .error-message {
     color: white;
     background: var(--color-error);
@@ -172,7 +157,6 @@ button:active {
     }
 }
 
-/* ===== HISTORIQUE ===== */
 .history-header {
     display: flex;
     justify-content: space-between;
@@ -180,7 +164,6 @@ button:active {
     margin-bottom: 1rem;
 }
 
-/* Bouton Effacer (couleur d'action secondaire/danger) */
 .clear-btn {
     padding: 0.6rem 1.2rem;
     font-size: 0.95rem;
@@ -205,14 +188,11 @@ button:active {
     font-size: 1.1rem;
 }
 
-/* Style de la carte d'historique (Card visuelle) */
 .history-item {
     padding: 1.2rem;
-    /* Fond très clair pour le contraste */
     background: white; 
     margin: 0.7rem 0;
     border-radius: 10px;
-    /* Bordure émeraude pour identifier la section */
     border-left: 5px solid var(--color-primary); 
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
     transition: all 0.3s ease;
@@ -233,13 +213,13 @@ button:active {
 }
 
 .history-item:hover {
-    transform: translateX(10px); /* Décalage plus prononcé au survol */
+    transform: translateX(10px);
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
 }
 
 .history-item strong {
     font-size: 1.2rem;
-    color: var(--color-secondary); /* Texte du résultat en bleu nuit */
+    color: var(--color-secondary);
     font-weight: 700;
 }
 
@@ -249,7 +229,6 @@ button:active {
     margin-top: 0.5rem;
 }
 
-/* Scrollbar personnalisée */
 .history-container::-webkit-scrollbar {
     width: 10px;
 }
@@ -268,7 +247,6 @@ button:active {
     background: #16a085;
 }
 
-/* ===== PIED DE PAGE (Couleur secondaire sombre) ===== */
 footer {
     background: var(--color-secondary);
     color: white;
@@ -287,8 +265,7 @@ footer p {
     color: #bdc3c7;
 }
 
-/* ===== RESPONSIVE (Ajustements de taille) ===== */
-@media (max-width: 900px) { /* Breakpoint ajusté pour une meilleure transition */
+@media (max-width: 900px) { 
     main {
         grid-template-columns: 1fr;
         margin: 1rem auto;
