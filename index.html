@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TP6 - Calculatrice Interactive</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1> Calculatrice Interactive</h1>
+    </header>
+    <main>
+        <section class="calculator-section">
+            <h2>Calculatrice</h2>
+            
+            <div class="calc-form">
+                <label for="numberA">Nombre A :</label>
+                <input 
+                    type="number" 
+                    id="numberA" 
+                    step="any" 
+                    placeholder="Entrez le premier nombre"
+                    required
+                >
+                
+                <label for="operation">Opération :</label>
+                <select id="operation">
+                    <option value="+">Addition (+)</option>
+                    <option value="-">Soustraction (−)</option>
+                    <option value="*">Multiplication (×)</option>
+                    <option value="/">Division (÷)</option>
+                </select>
+                
+                <label for="numberB">Nombre B :</label>
+                <input 
+                    type="number" 
+                    id="numberB" 
+                    step="any" 
+                    placeholder="Entrez le second nombre"
+                    required
+                >
+                
+                <button id="calcBtn" type="button">Calculer</button>
+            </div>
+            
+            <div id="error" class="error-message"></div>
+        </section>
+
+        <section class="history-section">
+            <div class="history-header">
+                <h2> Historique des Opérations</h2>
+                <button id="clearBtn" class="clear-btn" style="display: none;">Effacer</button>
+            </div>
+            <div id="history" class="history-container">
+                <p class="empty-message">Aucune opération effectuée</p>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>TP6 - Développement Web </p>
+        <p class="footer-subtitle">HTML + CSS + JavaScript</p>
+    </footer>
+
+    <script src="app.js"></script>
+</body>
+</html>
